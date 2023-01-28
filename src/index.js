@@ -9,32 +9,14 @@ const salaryInput = document.getElementById('salary');
 const employeesList = document.getElementById("employees");
 const updateEmployeebuttons = document.getElementById("update");
 
-
 const request = new Request("http://localhost:3000/employees");//local endpoint url that given when json-server run
-// GET
-// request.get()
-// .then(employees => console.log(employees))
-// .catch(err => console.log(err));
 
-// POST 
-// request.post({name:"İlknur", department:"IT", salary:6000})
-// .then(employee => console.log(employee))
-// .catch(err => console.log(err));
-
-// PUT
-// request.put(1,{name:"İlknur", department:"IT", salary:6000})
-// .then(employee => console.log(employee))
-// .catch(err => console.log(err));
-
-// DELETE
-// request.delete(2)
-// .then(message => console.log(message))
-// .catch(err => console.log(err));
 const ui = new UI();
 eventListeners();
 function eventListeners(){
     document.addEventListener("DOMContentLoaded",getAllEmployees);
     form.addEventListener("submit",addEmployee);
+    employeesList.addEventListener("click",updateOrDelete);
 }
 function getAllEmployees(){
     request.get()
@@ -61,4 +43,20 @@ function addEmployee(e){
     }
     ui.clearInputs();
     e.preventDefault();
+}
+function updateOrDelete(e){
+    if(e.target.id === "delete-employee"){
+        deleteEmployee(e.target);
+    }
+    else if(e.target.id === "update-employee"){
+
+    }
+}
+function deleteEmployee(targetEmployee){
+    const id = targetEmployee.parentElement.previousElementSibling.previousElementSibling.textContent;
+    request.delete(id)
+    .then(message =>{
+        ui.deleteEmployeeFromUI(targetEmployee.parentElement.parentElement);
+    })
+    .catch(err => console.log(err));
 }
