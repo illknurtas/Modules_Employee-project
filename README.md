@@ -24,6 +24,19 @@ devServer: {
 After all these steps, to open the project in the live server, run this code in terminal:
 ```npm run start```
 
+## API Installation
+
+To be able to create an API json folder first install json-server by typing:
+````
+npm install -g json-server // for windows OS
+sudo npm install -g json-server // for Mac OS
+```
+
+Then to run the API file run 
+```
+json-server --watch "path of the API file"
+```
+
 ## PROJECT
 <p align="center">
 <img
