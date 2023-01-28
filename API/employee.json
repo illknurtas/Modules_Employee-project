@@ -11,6 +11,12 @@
       "department": "Biomedical",
       "salary": 6000,
       "id": 2
+    },
+    {
+      "name": "ilayda günevi",
+      "department": "teacher",
+      "salary": "10000",
+      "id": 3
     }
   ]
 }

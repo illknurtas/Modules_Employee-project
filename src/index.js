@@ -34,6 +34,7 @@ const ui = new UI();
 eventListeners();
 function eventListeners(){
     document.addEventListener("DOMContentLoaded",getAllEmployees);
+    form.addEventListener("submit",addEmployee);
 }
 function getAllEmployees(){
     request.get()
@@ -41,4 +42,23 @@ function getAllEmployees(){
         ui.addAllEmployeesToUI(employees);
     })
     .catch(err => console.log(err));
+}
+function addEmployee(e){
+
+    const employeeName = nameInput.value.trim();
+    const employeeDepartment = departmentInput.value.trim();
+    const employeeSalary = salaryInput.value.trim();
+
+    if(employeeName === ""||employeeDepartment === ""||employeeSalary === ""){
+        alert ("Please fill all fields");
+    }
+    else{
+        request.post({name:employeeName, department:employeeDepartment, salary: employeeSalary})
+        .then(employee => {
+            ui.addEmployeeToUI(employee);
+        })
+        .catch(err => console.log(err));
+    }
+    ui.clearInputs();
+    e.preventDefault();
 }
