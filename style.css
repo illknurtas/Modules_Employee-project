@@ -1,4 +1,23 @@
-.addEmp{
+nav{
+    background-color: #0e0e65;
+    
+}
+nav a{
+    margin-left: 2rem;
+}
+.container{
+    padding: 3rem;
     margin: 0;
-    padding: 0;
+}
+.card.row{
+    border: 0;
+}
+th{
+    color: aliceblue;
+}
+.table{
+    background: #3636aa;
+}
+#employees{
+    color: aliceblue;
 }

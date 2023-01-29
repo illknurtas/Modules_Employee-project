@@ -17,7 +17,7 @@ export class UI{
                     <td>${employee.salary}</td>
                     <td>${employee.id}</td>
                     <td><a href="#" id = "update-employee" class= "btn btn-danger">Update</a></td> 
-                    <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delet</a></td>
+                    <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delete</a></td>
                 </tr>
             `;
         });
@@ -36,7 +36,7 @@ export class UI{
                 <td>${employee.salary}</td>
                 <td>${employee.id}</td>
                 <td><a href="#" id = "update-employee" class= "btn btn-danger">Update</a></td> 
-                <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delet</a></td>
+                <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delete</a></td>
             </tr>
         `;
     }
@@ -72,7 +72,7 @@ export class UI{
                     <td>${employee.salary}</td>
                     <td>${employee.id}</td>
                     <td><a href="#" id = "update-employee" class= "btn btn-danger">Update</a></td> 
-                    <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delet</a></td>
+                    <td> <a href="#" id = "delete-employee" class= "btn btn-danger">Delete</a></td>
              </tr>
         `;
         this.clearInputs();
