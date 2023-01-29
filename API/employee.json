@@ -2,14 +2,14 @@
   "employees": [
     {
       "name": "İlknur",
-      "department": "IT",
-      "salary": 6000,
+      "department": "Frontend Developer",
+      "salary": "4000",
       "id": 1
     },
     {
       "name": "Erwan",
-      "department": "Biomedical",
-      "salary": 6000,
+      "department": "Biomedical Engineer",
+      "salary": "6000",
       "id": 2
     }
   ]
