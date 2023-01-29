@@ -43,4 +43,25 @@ export class UI{
     deleteEmployeeFromUI(element){
         element.remove();
     }
+
+    toggleUpdateButton(target){
+        // update button and employee info will appear 
+        if(this.updateButton.style.display == 'none'){
+            this.updateButton.style.display = 'block';
+            this.addEmployeeInfoToInputs(target);
+        }
+        else{
+            // update button and employee info will disappear 
+            this.updateButton.style.display = 'none';
+            this.clearInputs();
+        }
+    }
+    addEmployeeInfoToInputs(target){
+        const children = target.children;
+
+        // These lines make employee's information display to the screen
+        this.nameInput.value = children[0].textContent;
+        this.departmentInput.value = children[1].textContent;
+        this.salaryInput.value = children[2].textContent;
+    }
 }

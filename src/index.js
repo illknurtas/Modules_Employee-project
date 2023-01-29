@@ -44,12 +44,13 @@ function addEmployee(e){
     ui.clearInputs();
     e.preventDefault();
 }
+// DELETE
 function updateOrDelete(e){
     if(e.target.id === "delete-employee"){
         deleteEmployee(e.target);
     }
     else if(e.target.id === "update-employee"){
-
+        updateEmpluyeeController(e.target.parentElement.parentElement);
     }
 }
 function deleteEmployee(targetEmployee){
@@ -59,4 +60,8 @@ function deleteEmployee(targetEmployee){
         ui.deleteEmployeeFromUI(targetEmployee.parentElement.parentElement);
     })
     .catch(err => console.log(err));
+}
+// UPDATE
+function updateEmpluyeeController(targetEmployee){
+    ui.toggleUpdateButton(targetEmployee);
 }
