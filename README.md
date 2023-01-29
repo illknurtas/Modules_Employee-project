@@ -37,9 +37,4 @@ Then to run the API file run
 json-server --watch "path of the API file"
 ```
 
-## PROJECT
-<p align="center">
-<img
-width="750" 
-alt="Screen Shot 2023-01-28 at 01 29 48" 
-src="https://user-images.githubusercontent.com/77456662/215218478-8b5241c1-a268-4681-902d-127170bbe1d0.png"/></p>
+
