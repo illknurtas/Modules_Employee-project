@@ -1,13 +1,13 @@
 {
   "employees": [
     {
-      "name": "İlknur t",
+      "name": "Person 1",
       "department": "Frontend Developer",
       "salary": "4000",
       "id": 1
     },
     {
-      "name": "Erwan",
+      "name": "Person 2",
       "department": "Biomedical Engineer",
       "salary": "6000",
       "id": 2
